@@ -3,6 +3,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /
-  static_files: src/index.html
-  upload: src/index.html
+- url: /(index(\.html)?)?
+  static_files: static/index.html
+  upload: static/index.html
+- url: /cricket(\.html)?
+  static_files: static/cricket.html
+  upload: static/cricket.html
+- url: /music(\.html)?
+  static_files: static/music.html
+  upload: static/music.html
