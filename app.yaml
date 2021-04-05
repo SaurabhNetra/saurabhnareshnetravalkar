@@ -3,12 +3,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
+
+- url: /images
+  static_dir: images
+  
 - url: /(index(\.html)?)?
   static_files: static/index.html
+  http_headers:
+    Access-Control-Allow-Origin: "*"
   upload: static/index.html
-- url: /cricket(\.html)?
-  static_files: static/cricket.html
-  upload: static/cricket.html
-- url: /music(\.html)?
-  static_files: static/music.html
-  upload: static/music.html
